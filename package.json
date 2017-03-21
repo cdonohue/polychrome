@@ -18,8 +18,8 @@
     "minify": "uglifyjs $npm_package_main -c warnings=false -m toplevel -o $npm_package_main -p relative --in-source-map ${npm_package_main}.map --source-map ${npm_package_main}.map",
     "postminify": "yarn run size",
     "size": "echo \"Gzipped Size: $(strip-json-comments --no-whitespace $npm_package_main | gzip-size)\"",
-    "prepublish": "yarn run -s build",
-    "release": "yarn run build -s && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && yarn publish"
+    "prepublish": "yarn run build",
+    "release": "yarn run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && yarn publish"
   },
   "repository": {
     "type": "git",
