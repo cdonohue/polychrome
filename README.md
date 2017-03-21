@@ -27,11 +27,11 @@ const red = polychrome("#F00");
 red.rgb() // "rgb(255,0,0)"
 
 // Manipulate polychrome colors
-const darkerRed = red.darken(); // darkens 10% by default (pass in a percentage)
-darkerRed.hsl() // "hsl(0,100%,45%)"
+const darkerRed = red.darken(20); // (pass in an integer percentage)
+darkerRed.hsl() // "hsl(0,100%,40%)"
 
 // Chain polychrome methods together before outputting
-polychrome("#F00").darken().fadeOut().rgb() // "rgba(230,0,0,0.5)"
+polychrome("#F00").darken(20).fadeOut(60).rgb() // "rgba(204,0,0,0.4)"
 ```
 
 ---
@@ -69,7 +69,7 @@ In addition to the above properties, the following methods are available to a `p
   ```js
   // rgba will be used if an alpha value exists
   polychrome("#000").rgb()           // "rgb(0,0,0)"
-  polychrome("#000").fadeOut().rgb() // "rgba(0,0,0,.5)
+  polychrome("#000").fadeOut(60).rgb() // "rgba(0,0,0,.4)
   ```
 
 - `.hsl()` - returns an hsl(a) css compatible color string
@@ -77,7 +77,7 @@ In addition to the above properties, the following methods are available to a `p
   ```js
   // hsla will be used if an alpha value exists
   polychrome("#000").hsl()           // "hsl(0,0%,0%)"
-  polychrome("#000").fadeOut().hsl() // "hsla(0,0%,0%,.5)
+  polychrome("#000").fadeOut(60).hsl() // "hsla(0,0%,0%,.4)
   ```
 
 ### Color Manipulation
@@ -95,28 +95,28 @@ In addition to the above properties, the following methods are available to a `p
 
 - `.darken(percentage)`
 
-  Returns a `polychrome` darkened by `percentage`. Default `10%` if no percentage is passed in.
+  Returns a `polychrome` darkened by `percentage`. Default `10` if no percentage is passed in.
 
 - `.desaturate(percentage)`
 
-  Returns a `polychrome` desaturated by `percentage`. Default `10%` if no percentage is passed in.
+  Returns a `polychrome` desaturated by `percentage`. Default `10` if no percentage is passed in.
 
 - `.fadeIn(percentage)`
 
-  Returns a `polychrome` faded in by `percentage`. Default `50%` if no percentage is passed in.
+  Returns a `polychrome` faded in by `percentage`. Default `50` if no percentage is passed in.
 
 - `.fadeOut(percentage)`
 
-  Returns a `polychrome` faded out by `percentage`. Default `50%` if no percentage is passed in.
+  Returns a `polychrome` faded out by `percentage`. Default `50` if no percentage is passed in.
 
 
 - `.lighten(percentage)`
 
-  Returns a `polychrome` lightened by `percentage`. Default `10%` if no percentage is passed in.
+  Returns a `polychrome` lightened by `percentage`. Default `10` if no percentage is passed in.
 
 - `.saturate(percentage)`
 
-  Returns a `polychrome` saturated by `percentage`. Default `10%` if no percentage is passed in.
+  Returns a `polychrome` saturated by `percentage`. Default `10` if no percentage is passed in.
 
 ---
 
