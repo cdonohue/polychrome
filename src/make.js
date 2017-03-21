@@ -1,0 +1,90 @@
+import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
+import darken from "./darken";
+import lighten from "./lighten";
+import fadeIn from "./fadeIn";
+import fadeOut from "./fadeOut";
+import contrast from "./contrast";
+import saturate from "./saturate";
+import desaturate from "./desaturate";
+
+const makeColor = (properties) => {
+  const { rHex, gHex, bHex, r, g, b, h, s, l, a = 1 } = properties;
+  const color = {
+    ...properties,
+
+    hex() {
+      return `#${rHex}${gHex}${bHex}`;
+    },
+    rgb() {
+      return (a < 1)
+        ? `rgba(${r},${g},${b},${a})`
+        : `rgb(${r},${g},${b})`
+      ;
+    },
+    hsl() {
+      return (a < 1)
+        ? `hsla(${h},${s}%,${l}%,${a})`
+        : `hsl(${h},${s}%,${l}%)`
+      ;
+    },
+    luma: (299 * r + 587 * g + 114 * b) / 1000,
+  }
+
+  return {
+    ...color,
+    darken(percentage) {
+      return darken(color, percentage);
+    },
+    lighten(percentage) {
+      return lighten(color, percentage);
+    },
+    fadeIn(percentage) {
+      return fadeIn(color, percentage);
+    },
+    fadeOut(percentage) {
+      return fadeOut(color, percentage);
+    },
+    contrast(dark, light) {
+      return contrast(color, dark, light);
+    },
+    saturate(percentage) {
+      return saturate(color, percentage);
+    },
+    desaturate(percentage) {
+      return desaturate(color, percentage);
+    }
+  };
+};
+
+export default {
+  fromHex(rHex, gHex, bHex) {
+    const [r, g, b] = hexToRgb(rHex, gHex, bHex);
+    const [h, s, l, a] = rgbToHsl(r, g, b);
+
+    return makeColor({
+      rHex, gHex, bHex,
+      r, g, b,
+      h, s, l, a,
+    });
+  },
+  fromRgb(r, g, b, a = 1) {
+    const [rHex, gHex, bHex] = rgbToHex(r, g, b);
+    const [h, s, l] = rgbToHsl(r, g, b);
+
+    return makeColor({
+      rHex, gHex, bHex,
+      r, g, b,
+      h, s, l, a,
+    });
+  },
+  fromHsl(h, s, l, a = 1) {
+    const [r, g, b] = hslToRgb(h, s, l);
+    const [rHex, gHex, bHex] = rgbToHex(r, g, b);
+
+    return makeColor({
+      rHex, gHex, bHex,
+      r, g, b,
+      h, s, l, a,
+    });
+  }
+}
