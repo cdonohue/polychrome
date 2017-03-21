@@ -139,10 +139,6 @@ describe("lighten", () => {
     expect(lighten(blue).hsl()).to.equal("hsl(240,100%,55%)");
   });
 
-  it("should lighten a color when passed a color string", () => {
-    expect(lighten("#00F").hsl()).to.equal("hsl(240,100%,55%)");
-  });
-
   it("should not lighten a color higher than 100%", () => {
     const white = parse("#FFF");
     expect(lighten(white).rgb()).to.equal("rgb(255,255,255)");
