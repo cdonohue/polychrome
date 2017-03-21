@@ -1,5 +1,5 @@
 # `🎨 polychrome`
->A small `< 2kB` library for parsing and manipulating colors
+>A small `< 2kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
 ```shell
