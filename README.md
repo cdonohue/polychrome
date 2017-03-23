@@ -2,12 +2,18 @@
 >A small `1.65kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
+>Using `yarn`
 ```shell
 $> yarn add polychrome
 ```
-_or_
+>Using `npm`
 ```shell
 $> npm install polychrome
+```
+Using a `script` tag
+>**Note**: this script makes `window.polychrome` available as a global
+```html
+<script src="https://unpkg.com/polychrome"></script>
 ```
 
 ## Usage
