@@ -1,5 +1,5 @@
 # 🎨 `polychrome`
->A small `1.65kB (gzipped)` library for parsing and manipulating colors
+>A small `1.68kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
 >Using `yarn`
