@@ -1,7 +1,8 @@
 # 🎨 `polychrome`
 >A small `1.68kB (gzipped)` library for parsing and manipulating colors
 
-## Installation (feel free to replace `yarn add` with `npm install`)
+## Installation
+>feel free to replace `yarn add` with `npm install`
 ```shell
 $> yarn add polychrome
 ```
