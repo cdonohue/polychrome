@@ -1,19 +1,9 @@
 # 🎨 `polychrome`
 >A small `1.68kB (gzipped)` library for parsing and manipulating colors
 
-## Installation
->Using `yarn`
+## Installation (feel free to replace `yarn add` with `npm install`)
 ```shell
 $> yarn add polychrome
-```
->Using `npm`
-```shell
-$> npm install polychrome
-```
-Using a `script` tag
->**Note**: this script makes `window.polychrome` available as a global
-```html
-<script src="https://unpkg.com/polychrome"></script>
 ```
 
 ## Usage
@@ -75,7 +65,7 @@ In addition to the above properties, the following methods are available to a `p
   ```js
   // rgba will be used if an alpha value exists
   polychrome("#000").rgb()           // "rgb(0,0,0)"
-  polychrome("#000").fadeOut(60).rgb() // "rgba(0,0,0,.4)
+  polychrome("#000").fadeOut(60).rgb() // "rgba(0,0,0,.4)"
   ```
 
 - `.hsl()` - returns an hsl(a) css compatible color string
@@ -83,7 +73,7 @@ In addition to the above properties, the following methods are available to a `p
   ```js
   // hsla will be used if an alpha value exists
   polychrome("#000").hsl()           // "hsl(0,0%,0%)"
-  polychrome("#000").fadeOut(60).hsl() // "hsla(0,0%,0%,.4)
+  polychrome("#000").fadeOut(60).hsl() // "hsla(0,0%,0%,.4)"
   ```
 
 ### Color Manipulation
