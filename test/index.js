@@ -163,3 +163,21 @@ describe("darken", () => {
     expect(blue.darken(20).hex()).to.equal("#0000CC");
   })
 });
+
+describe("alpha", () => {
+
+  it("should fade out a color by 50%", () => {
+    const black = parse();
+    expect(black.fadeOut().a).to.equal(0.5);
+  });
+
+  it("should fade in a color by 50%", () => {
+    const transparentBlack = parse("rgba(0,0,0,.5)");
+    expect(transparentBlack.fadeIn().a).to.equal(0.75);
+  });
+
+  it("should set the alpha channel absolutely", () => {
+    const reallyTransparentWhite = parse("rgba(255,255,255,.1)");
+    expect(reallyTransparentWhite.setAlpha(100).a).to.equal(1);
+  });
+});
