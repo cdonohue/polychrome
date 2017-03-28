@@ -1,5 +1,5 @@
 # 🎨 `polychrome`
->A small `1.68kB (gzipped)` library for parsing and manipulating colors
+>A small `1.72kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
 >feel free to replace `yarn add` with `npm install`
@@ -78,6 +78,7 @@ In addition to the above properties, the following methods are available to a `p
   ```
 
 ### Color Manipulation
+##### Utilities
 - `.contrast(dark, light)`
 
   Checks `luma` value of `polychrome` and returns `light` or `dark` `polychrome` depending on the contrast level
@@ -90,6 +91,7 @@ In addition to the above properties, the following methods are available to a `p
 
   > `dark` and `light` can be a `String` _or_ `polychrome`. They default to `black (#000)` and `white (#FFF)` if params are not passed in.
 
+##### Relative modifications
 - `.darken(percentage)`
 
   Returns a `polychrome` darkened by `percentage`. Default `10` if no percentage is passed in.
@@ -106,7 +108,6 @@ In addition to the above properties, the following methods are available to a `p
 
   Returns a `polychrome` faded out by `percentage`. Default `50` if no percentage is passed in.
 
-
 - `.lighten(percentage)`
 
   Returns a `polychrome` lightened by `percentage`. Default `10` if no percentage is passed in.
@@ -115,6 +116,10 @@ In addition to the above properties, the following methods are available to a `p
 
   Returns a `polychrome` saturated by `percentage`. Default `10` if no percentage is passed in.
 
+##### Absolute modifications
+- `.setAlpha(percentage)`
+
+  Returns a `polychrome` with an `alpha` value _absolutely_ set to `percentage`. No change occurs if percentage is omitted.
 ---
 
 ## License
