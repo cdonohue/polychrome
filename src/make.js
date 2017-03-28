@@ -1,8 +1,7 @@
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
 import darken from "./darken";
 import lighten from "./lighten";
-import fadeIn from "./fadeIn";
-import fadeOut from "./fadeOut";
+import { fadeIn, fadeOut, setAlpha } from "./alpha";
 import contrast from "./contrast";
 import saturate from "./saturate";
 import desaturate from "./desaturate";
@@ -37,6 +36,9 @@ const makeColor = (properties) => {
     },
     lighten(percentage) {
       return lighten(color, percentage);
+    },
+    setAlpha(percentage) {
+      return setAlpha(color, percentage);
     },
     fadeIn(percentage) {
       return fadeIn(color, percentage);
