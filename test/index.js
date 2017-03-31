@@ -143,6 +143,11 @@ describe("lighten", () => {
     const white = parse("#FFF");
     expect(lighten(white).rgb()).to.equal("rgb(255,255,255)");
   });
+
+  it("should set the lightness absolutely", () => {
+    const white = parse("rgb(0,0,0)");
+    expect(white.setLightness(100).l).to.equal(100);
+  });
 });
 
 describe("darken", () => {
@@ -165,7 +170,6 @@ describe("darken", () => {
 });
 
 describe("alpha", () => {
-
   it("should fade out a color by 50%", () => {
     const black = parse();
     expect(black.fadeOut().a).to.equal(0.5);
