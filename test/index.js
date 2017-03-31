@@ -1,8 +1,7 @@
 import { expect } from "chai";
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "../src/conversion";
 import parse from "../src/parse";
-import darken from "../src/darken";
-import lighten from "../src/lighten";
+import { darken, lighten } from "../src/lightness";
 
 describe("hexToRgb", () => {
   it("should convert a 3 channel hexadecimal color to the rgb color space", () =>{
@@ -145,8 +144,8 @@ describe("lighten", () => {
   });
 
   it("should set the lightness absolutely", () => {
-    const white = parse("rgb(0,0,0)");
-    expect(white.setLightness(100).l).to.equal(100);
+    const black = parse("rgb(0,0,0)");
+    expect(black.setLightness(100).l).to.equal(100);
   });
 });
 
@@ -166,7 +165,12 @@ describe("darken", () => {
     expect(blue.darken).to.be.a("function");
 
     expect(blue.darken(20).hex()).to.equal("#0000CC");
-  })
+  });
+
+  it("should set the darkness absolutely", () => {
+    const white = parse("rgb(255,255,255)");
+    expect(white.setLightness(0).l).to.equal(0);
+  });
 });
 
 describe("alpha", () => {

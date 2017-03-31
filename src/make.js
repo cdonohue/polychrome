@@ -1,5 +1,5 @@
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
-import { darken, lighten, setLightness } from "./lightness";
+import { darken, lighten, lightness } from "./lightness";
 import { fadeIn, fadeOut, setAlpha } from "./alpha";
 import contrast from "./contrast";
 import saturate from "./saturate";
@@ -30,8 +30,8 @@ const makeColor = (properties) => {
 
   return {
     ...color,
-    setLightness(percentage) {
-      return setLightness(color, percentage);
+    lightness(percentage) {
+      return lightness(color, percentage);
     },
     darken(percentage) {
       return darken(color, percentage);
