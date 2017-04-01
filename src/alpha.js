@@ -1,9 +1,6 @@
 import make from "./make";
+import { getAlphaModifier } from "./utils";
 
-const getAbsoluteModifier = (alpha, percentage) => {
-  const ratio = percentage / 100;
-  return alpha ? alpha * ratio : ratio;
-}
 
 export const setAlpha = (color, percentage = null) => {
   if (percentage === null) return color;
@@ -14,10 +11,10 @@ export const setAlpha = (color, percentage = null) => {
 
 export const fadeIn = (color, percentage = 50) => {
   const { a } = color;
-  return setAlpha(color, (a + getAbsoluteModifier(a, percentage)) * 100);
+  return setAlpha(color, (a + getAlphaModifier(a, percentage)) * 100);
 }
 
 export const fadeOut = (color, percentage = 50) => {
   const { a } = color;
-  return setAlpha(color, (a - getAbsoluteModifier(a, percentage)) * 100);
+  return setAlpha(color, (a - getAlphaModifier(a, percentage)) * 100);
 }
