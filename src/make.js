@@ -30,6 +30,12 @@ const makeColor = (properties) => {
 
   return {
     ...color,
+    isDark() {
+      return color.luma < 128;
+    },
+    isLight() {
+      return color.luma >= 128;
+    },
     setLightness(percentage) {
       return setLightness(color, percentage);
     },
