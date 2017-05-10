@@ -4,6 +4,7 @@ import { fadeIn, fadeOut, setAlpha } from "./alpha";
 import contrast from "./contrast";
 import saturate from "./saturate";
 import desaturate from "./desaturate";
+import luma from "./luma";
 
 const makeColor = (properties) => {
   const { rHex, gHex, bHex, r, g, b, h, s, l, a = 1 } = properties;
@@ -25,7 +26,7 @@ const makeColor = (properties) => {
         : `hsl(${h},${s}%,${l}%)`
       ;
     },
-    luma: (299 * r + 587 * g + 114 * b) / 1000,
+    luma: luma(r, g, b),
   }
 
   return {

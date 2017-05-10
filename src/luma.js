@@ -1,0 +1,1 @@
+export default (r, g, b) => (299 * r + 587 * g + 114 * b) / 1000;
