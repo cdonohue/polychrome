@@ -1,3 +1,6 @@
+/**
+ * https://en.m.wikipedia.org/wiki/Relative_luminance
+ */
 export default color => {
   const [R, G, B] = [color.r, color.g, color.b].map(channel => {
     const sRGB = channel / 255;

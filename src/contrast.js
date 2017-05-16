@@ -8,6 +8,10 @@ const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
 
   const contrastColor = baseColor.isDark() ? lightColor : darkColor;
 
+  /**
+   * Calculate relative luminance and find ratio
+   * https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G18
+   */
   const rLums = [ relativeLuminance(baseColor), relativeLuminance(contrastColor)];
 
   const contrastRatio = (Math.max(...rLums) + 0.05) / (Math.min(...rLums) + 0.05);
