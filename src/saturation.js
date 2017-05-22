@@ -17,3 +17,5 @@ export const desaturate = (color, percentage = 10) => {
   const { s } = color;
   return setSaturation(color, s - getPercentageModifier(s, percentage));
 }
+
+export const grayscale = (color) => setSaturation(color, 0);

@@ -1,7 +1,7 @@
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
 import { darken, lighten, setLightness } from "./lightness";
 import { fadeIn, fadeOut, setAlpha } from "./alpha";
-import { desaturate, saturate, setSaturation } from "./saturation"
+import { desaturate, grayscale, saturate, setSaturation } from "./saturation"
 import contrast from "./contrast";
 
 const makeColor = (properties) => {
@@ -58,6 +58,9 @@ const makeColor = (properties) => {
     },
     desaturate(percentage) {
       return desaturate(color, percentage);
+    },
+    grayscale() {
+      return grayscale(color);
     }
   };
 };
