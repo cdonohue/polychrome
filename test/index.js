@@ -3,6 +3,7 @@ import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "../src/conversion";
 import parse from "../src/parse";
 import { darken, lighten } from "../src/lightness";
 import { desaturate, saturate, setSaturation } from "../src/saturation";
+import { complimentary, setHue, spin } from "../src/hue";
 
 describe("hexToRgb", () => {
   it("should convert a 3 channel hexadecimal color to the rgb color space", () =>{
@@ -195,6 +196,32 @@ describe("saturation", () => {
     expect(setSaturation(bostonBlue, 20).s).to.equal(20);
   });
 });
+
+describe("hue", () => {
+  const bostonBlue = parse("#4097bf");
+
+  it("should chain complimentary, setHue, and spin on polychromes", () => {
+    expect(bostonBlue.complimentary).to.be.a("function");
+    expect(bostonBlue.setHue).to.be.a("function");
+    expect(bostonBlue.spin).to.be.a("function");
+  });
+
+  it("should return a complimentary color", () => {
+    expect(complimentary(bostonBlue, 20).h).to.equal(19);
+  });
+
+  it("should spin a color by a positive number", () => {
+    expect(spin(bostonBlue, 150).h).to.equal(349);
+  });
+
+  it("should spin a color by a negative number", () => {
+    expect(spin(bostonBlue, -100).h).to.equal(99);
+  });
+
+  it("should absolutely set hue to 0 (red)", () => {
+    expect(setHue(bostonBlue, 0).h).to.equal(0);
+  });
+})
 
 describe("alpha", () => {
   it("should fade out a color by 50%", () => {
