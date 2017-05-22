@@ -2,6 +2,7 @@ import { expect } from "chai";
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "../src/conversion";
 import parse from "../src/parse";
 import { darken, lighten } from "../src/lightness";
+import { desaturate, saturate, setSaturation } from "../src/saturation";
 
 describe("hexToRgb", () => {
   it("should convert a 3 channel hexadecimal color to the rgb color space", () =>{
@@ -170,6 +171,28 @@ describe("darken", () => {
   it("should set the darkness absolutely", () => {
     const white = parse("rgb(255,255,255)");
     expect(white.setLightness(0).l).to.equal(0);
+  });
+});
+
+describe("saturation", () => {
+  const bostonBlue = parse("#4097bf");
+
+  it("should chain saturate, desaturate, and setSaturation on polychromes", () => {
+    expect(bostonBlue.desaturate).to.be.a("function");
+    expect(bostonBlue.saturate).to.be.a("function");
+    expect(bostonBlue.setSaturation).to.be.a("function");
+  });
+
+  it("should saturate a color by 20%", () => {
+    expect(saturate(bostonBlue, 20).s).to.equal(60);
+  });
+
+  it("should desaturate a color by 20%", () => {
+    expect(desaturate(bostonBlue, 20).s).to.equal(40);
+  });
+
+  it("should absolutely set saturation to 20%", () => {
+    expect(setSaturation(bostonBlue, 20).s).to.equal(20);
   });
 });
 
