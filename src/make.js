@@ -1,7 +1,8 @@
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
 import { darken, lighten, setLightness } from "./lightness";
 import { fadeIn, fadeOut, setAlpha } from "./alpha";
-import { desaturate, grayscale, saturate, setSaturation } from "./saturation"
+import { desaturate, grayscale, saturate, setSaturation } from "./saturation";
+import { complimentary, setHue, spin } from "./hue";
 import contrast from "./contrast";
 
 const makeColor = (properties) => {
@@ -29,6 +30,15 @@ const makeColor = (properties) => {
 
   return {
     ...color,
+    setHue(degrees) {
+      return setHue(color, degrees);
+    },
+    spin(degrees) {
+      return spin(color, degrees);
+    },
+    complimentary() {
+      return complimentary(color);
+    },
     setLightness(percentage) {
       return setLightness(color, percentage);
     },
