@@ -10,15 +10,7 @@ export const spin = (color, degrees = 0) => {
   const { h } = color;
   const newHue = h + degrees;
 
-  if (newHue < 0) {
-    return setHue(color, 360 - Math.abs(newHue));
-  }
-
-  if (newHue > 360) {
-    return setHue(color, newHue - 360);
-  }
-
-  return setHue(color, newHue);
+  return setHue(color, (newHue + 360) % 360);
 }
 
 export const complimentary = (color) => spin(color, 180);
