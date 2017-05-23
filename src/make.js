@@ -1,9 +1,9 @@
 import { hexToRgb, rgbToHex, rgbToHsl, hslToRgb } from "./conversion";
 import { darken, lighten, setLightness } from "./lightness";
 import { fadeIn, fadeOut, setAlpha } from "./alpha";
+import { desaturate, grayscale, saturate, setSaturation } from "./saturation";
+import { complimentary, setHue, spin } from "./hue";
 import contrast from "./contrast";
-import saturate from "./saturate";
-import desaturate from "./desaturate";
 import luma from "./luma";
 
 const makeColor = (properties) => {
@@ -37,6 +37,15 @@ const makeColor = (properties) => {
     isLight() {
       return color.luma >= 128;
     },
+    setHue(degrees) {
+      return setHue(color, degrees);
+    },
+    spin(degrees) {
+      return spin(color, degrees);
+    },
+    complimentary() {
+      return complimentary(color);
+    },
     setLightness(percentage) {
       return setLightness(color, percentage);
     },
@@ -58,11 +67,17 @@ const makeColor = (properties) => {
     contrast(dark, light) {
       return contrast(color, dark, light);
     },
+    setSaturation(percentage) {
+      return setSaturation(color, percentage);
+    },
     saturate(percentage) {
       return saturate(color, percentage);
     },
     desaturate(percentage) {
       return desaturate(color, percentage);
+    },
+    grayscale() {
+      return grayscale(color);
     }
   };
 };
