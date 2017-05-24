@@ -1,4 +1,5 @@
-# ![logo](images/logo.png) polychrome
+![logo](images/logo.png) 
+# `polychrome`
 >A small `~2kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
