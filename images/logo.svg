@@ -33,7 +33,7 @@
             <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
             <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
             <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
         </filter>
         <path d="M20.3733626,36.0664676 C20.3733626,36.0664676 20.3733626,4.66310836 20.3733626,4.66310836 C11.6979131,4.66310836 4.66507177,11.6929898 4.66507177,20.364788 C4.66507177,29.0365862 11.6979131,36.0664676 20.3733626,36.0664676 Z" id="path-11"></path>
         <filter x="-44.6%" y="-15.9%" width="189.1%" height="144.6%" filterUnits="objectBoundingBox" id="filter-12">
@@ -62,7 +62,7 @@
             </g>
             <g id="Group" transform="translate(78.947368, 31.303030)">
                 <g id="Oval">
-                    <use fill="#AAAAAA" fill-rule="evenodd" xlink:href="#path-9"></use>
+                    <use fill="#999999" fill-rule="evenodd" xlink:href="#path-9"></use>
                     <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
                 </g>
                 <g id="Oval-Copy-2">
