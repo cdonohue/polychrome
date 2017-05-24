@@ -4,6 +4,7 @@ import parse from "../src/parse";
 import { darken, lighten } from "../src/lightness";
 import { desaturate, saturate, setSaturation } from "../src/saturation";
 import { complimentary, setHue, spin } from "../src/hue";
+import { mix, shade, tint } from "../src/mix";
 
 describe("hexToRgb", () => {
   it("should convert a 3 channel hexadecimal color to the rgb color space", () =>{
@@ -220,6 +221,28 @@ describe("hue", () => {
 
   it("should absolutely set hue to 0 (red)", () => {
     expect(setHue(bostonBlue, 0).h).to.equal(0);
+  });
+});
+
+describe("mix", () => {
+  const bostonBlue = parse("#4097bf");
+
+  it("should chain mix, shade, and tint on polychromes", () => {
+    expect(bostonBlue.mix).to.be.a("function");
+    expect(bostonBlue.shade).to.be.a("function");
+    expect(bostonBlue.tint).to.be.a("function");
+  });
+
+  it("should mix two colors", () => {
+    expect(mix(bostonBlue, "#F00").hex()).to.equal("#9F4B5F");
+  });
+
+  it("should tint a color with white", () => {
+    expect(tint(bostonBlue).hex()).to.equal("#9FCBDF");
+  });
+
+  it("should shade a color with black", () => {
+    expect(shade(bostonBlue).hex()).to.equal("#204B5F");
   });
 })
 
