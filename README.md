@@ -1,5 +1,5 @@
-# 🎨 `polychrome`
->A small `1.72kB (gzipped)` library for parsing and manipulating colors
+# ![logo](images/logo.png) polychrome
+>A small `~2kB (gzipped)` library for parsing and manipulating colors
 
 ## Installation
 >feel free to replace `yarn add` with `npm install`
@@ -117,9 +117,21 @@ In addition to the above properties, the following methods are available to a `p
   Returns a `polychrome` saturated by `percentage`. Default `10` if no percentage is passed in.
 
 ##### Absolute modifications
-- `.setAlpha(percentage)`
+- `.setAlpha(value)`
 
-  Returns a `polychrome` with an `alpha` value _absolutely_ set to `percentage`. No change occurs if percentage is omitted.
+  Returns a `polychrome` with an `alpha` value _absolutely_ set to `value`. No change occurs if value is omitted.
+
+- `.setHue(value)`
+
+  Returns a `polychrome` with a `hue` value _absolutely_ set to `value`. No change occurs if value is omitted.
+
+- `.setLightness(value)`
+
+  Returns a `polychrome` with a `lightness` value _absolutely_ set to `value`. No change occurs if value is omitted.
+
+- `.setSaturation(value)`
+
+  Returns a `polychrome` with a `saturation` value _absolutely_ set to `value`. No change occurs if value is omitted.
 ---
 
 ## License
