@@ -3,6 +3,7 @@ import { darken, lighten, setLightness } from "./lightness";
 import { fadeIn, fadeOut, setAlpha } from "./alpha";
 import { desaturate, grayscale, saturate, setSaturation } from "./saturation";
 import { complimentary, setHue, spin } from "./hue";
+import { mix, shade, tint } from "./mix";
 import contrast from "./contrast";
 
 const makeColor = (properties) => {
@@ -71,7 +72,16 @@ const makeColor = (properties) => {
     },
     grayscale() {
       return grayscale(color);
-    }
+    },
+    mix(mixColor) {
+      return mix(color, mixColor);
+    },
+    shade() {
+      return shade(color);
+    },
+    tint() {
+      return tint(color);
+    },
   };
 };
 
