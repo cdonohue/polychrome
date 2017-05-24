@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="157px" height="137px" viewBox="0 0 157 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+<svg width="149px" height="130px" viewBox="0 0 149 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <title>logo</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="26.1698795" y="5.6569058" width="44.8421053" height="116.161616" rx="6"></rect>
-        <filter x="-20.1%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-2">
-            <feOffset dx="-2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+        <filter x="-15.6%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <rect id="path-3" x="35.6486019" y="5.16435355" width="44.8421053" height="116.161616" rx="6"></rect>
-        <filter x="-20.1%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-4">
-            <feOffset dx="-2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+        <filter x="-15.6%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <rect id="path-5" x="45.1176679" y="5.27198459" width="44.8421053" height="116.161616" rx="6"></rect>
-        <filter x="-20.1%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-6">
-            <feOffset dx="-2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+        <filter x="-15.6%" y="-4.3%" width="131.2%" height="112.1%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <path d="M61.8886711,7.31313131 C57.7151095,7.31313131 54.3157895,10.7054157 54.3157895,14.8900105 L54.3157895,115.897868 C54.3157895,120.076803 57.7062841,123.474747 61.8886711,123.474747 L92.216592,123.474747 C96.3901536,123.474747 99.7894737,120.082463 99.7894737,115.897868 L99.7894737,96.9552407 C124.263937,96.6175131 144,76.6807706 144,52.1363636 C144,27.5919567 124.263937,7.65521414 99.7894737,7.31748653 L61.8886711,7.31313131 Z" id="path-7"></path>
-        <filter x="-17.8%" y="-12.1%" width="135.7%" height="127.5%" filterUnits="objectBoundingBox" id="filter-8">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        <filter x="-6.7%" y="-5.2%" width="113.4%" height="110.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <ellipse id="path-9" cx="20.5263158" cy="20.5176768" rx="20.5263158" ry="20.5176768"></ellipse>
         <filter x="-4.9%" y="-4.9%" width="109.7%" height="109.7%" filterUnits="objectBoundingBox" id="filter-10">
@@ -43,7 +43,7 @@
         </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="logo" transform="translate(3.000000, 1.000000)">
+        <g id="logo" transform="translate(1.000000, 0.000000)">
             <g id="Rectangle-4-Copy-2" transform="translate(48.590932, 63.737714) rotate(-30.177751) translate(-48.590932, -63.737714) ">
                 <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
                 <use fill="#F97A66" fill-rule="evenodd" xlink:href="#path-1"></use>
