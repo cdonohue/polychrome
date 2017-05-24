@@ -5,6 +5,7 @@ import { desaturate, grayscale, saturate, setSaturation } from "./saturation";
 import { complimentary, setHue, spin } from "./hue";
 import { mix, shade, tint } from "./mix";
 import contrast from "./contrast";
+import luma from "./luma";
 
 const makeColor = (properties) => {
   const { rHex, gHex, bHex, r, g, b, h, s, l, a = 1 } = properties;
@@ -26,11 +27,17 @@ const makeColor = (properties) => {
         : `hsl(${h},${s}%,${l}%)`
       ;
     },
-    luma: (299 * r + 587 * g + 114 * b) / 1000,
+    luma: luma(r, g, b),
   }
 
   return {
     ...color,
+    isDark() {
+      return color.luma < 128;
+    },
+    isLight() {
+      return color.luma >= 128;
+    },
     setHue(degrees) {
       return setHue(color, degrees);
     },
