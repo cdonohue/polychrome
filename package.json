@@ -18,7 +18,7 @@
     "postminify": "npm run size",
     "size": "echo \"Gzipped Size: $(strip-json-comments --no-whitespace $npm_package_main | gzip-size)\"",
     "prepublish": "npm run build -s",
-    "release": "npm run build -s && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "release": "np"
   },
   "repository": {
     "type": "git",
