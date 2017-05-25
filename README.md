@@ -36,14 +36,14 @@ polychrome("#F00").darken(20).fadeOut(60).rgb() // "rgba(204,0,0,0.4)"
 ---
 
 ## API Reference
-- [Polychrome](#polychrome)
+- [Polychrome](#polychrome-object)
 - [Alpha](#alpha)
 - [Hue](#hue)
 - [Lightness](#lightness)
 - [Mix](#mix)
 - [Saturation](#saturation)
 
-### Polychrome
+### Polychrome Object
 `polychrome(colorString)`
 >`colorString` can be a hex (3 or 6 digit), rgb(a), or hsl(a) string. Returns a `polychrome` object.
 
