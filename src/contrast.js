@@ -6,7 +6,7 @@ const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
   const darkColor = typeof dark === "string" ? parse(dark) : dark;
   const lightColor = typeof light === "string" ? parse(light) : light;
 
-  const contrastColor = baseColor.isDark() ? lightColor : darkColor;
+  const contrastColor = baseColor.luma < 128 ? lightColor : darkColor;
 
   /**
    * Calculate relative luminance and find ratio
