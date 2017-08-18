@@ -262,3 +262,16 @@ describe("alpha", () => {
     expect(reallyTransparentWhite.setAlpha(100).a).to.equal(1);
   });
 });
+
+describe("contrast", () => {
+  const marinerBlue = parse("#1d5fdb");
+  const whiteSmoke = parse("#f2f2f2");
+
+  it("should return the correct contrast object for a dark color", () => {
+    expect(marinerBlue.contrast().rgb()).to.equal("rgb(255,255,255)");
+  });
+
+  it("should return the correct contrast object for a light color", () => {
+    expect(whiteSmoke.contrast().rgb()).to.equal("rgb(0,0,0)");
+  });
+});
