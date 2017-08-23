@@ -7,8 +7,6 @@ const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
   const darkColor = typeof dark === "string" ? parse(dark) : dark;
   const lightColor = typeof light === "string" ? parse(light) : light;
 
-  console.log(baseColor.luma < 128);
-
   const contrastColor = baseColor.luma < 128 ? lightColor : darkColor;
 
   /**
@@ -23,6 +21,8 @@ const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
     return contrastColor;
   }
 
+  // TODO: Check to see either possible contrast color has a ratio of >= 4.5,
+  // regardless of the baseColor luma value
   if (darkColor.l === 0 || lightColor.l === 100) {
     return contrastColor;
   }
