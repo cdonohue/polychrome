@@ -1,10 +1,13 @@
 import parse from "./parse";
 import relativeLuminance from "./relativeLuminance";
+import { darken, lighten } from "./lightness";
 
 const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
   const baseColor = parse(color);
   const darkColor = typeof dark === "string" ? parse(dark) : dark;
   const lightColor = typeof light === "string" ? parse(light) : light;
+
+  console.log(baseColor.luma < 128);
 
   const contrastColor = baseColor.luma < 128 ? lightColor : darkColor;
 
@@ -20,7 +23,11 @@ const contrast = (color, dark = parse("#000"), light = parse("#FFF")) => {
     return contrastColor;
   }
 
-  return contrast(baseColor, darkColor.darken(1), lightColor.lighten(1));
+  if (darkColor.l === 0 || lightColor.l === 100) {
+    return contrastColor;
+  }
+
+  return contrast(baseColor, darken(darkColor, 1), lighten(lightColor,1));
 };
 
 export default contrast;
